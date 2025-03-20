@@ -2,10 +2,9 @@ name: ci_cd pipeline
 
 on:
   push:
-    branches: 
-     - main
+    branches: [ main ]
   pull_request:
-     - main
+    branches: [ main ]
 
 jobs:
   app_test:
