@@ -1,11 +1,11 @@
-from : python-3.9-slim
+from  python-3.9-slim
 
-workdir : /app
+workdir  /app
 
-copy : . /app
+copy  . /app
 
-run : pip install flask 
+run  pip install flask 
 
-expose : 5000
+expose  5000
 
-cmd : ["python","src/app.py"]
+cmd  ["python","app.py"]
