@@ -1,21 +1,21 @@
-name : ci_cd pipeline
+name: ci_cd pipeline
 
-on :
-  push :
-    branches : 
+on:
+  push:
+    branches: 
      - main
-  pull_request :
+  pull_request:
      - main
 
-jobs :
-  app_test :
-    runs-on : ubuntu-latest
-    steps :
-     - name : Checkout code
-       uses : actions/checkout@v4
+jobs:
+  app_test:
+    runs-on: ubuntu-latest
+    steps:
+     - name: Checkout code
+       uses: actions/checkout@v4
 
-     - name : setup python 
-       uses : actions/setup-python@v3
+     - name: setup python 
+       uses: actions/setup-python@v3
        with : 
        python-version: '3.9'
 
