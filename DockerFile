@@ -1,11 +1,16 @@
-from  python-3.9-slim
+FROM python:3.9-slim
 
-workdir  /app
+# Set the working directory
+WORKDIR /app
 
-copy  . /app
+# Copy the current directory contents into the container at /app
+COPY . /app
 
-run  pip install flask 
+# Install any needed packages specified in requirements.txt
+RUN pip install flask
 
-expose  5000
+# Make port 5000 available to the world outside this container
+EXPOSE 5000
 
-cmd  ["python","app.py"]
+# Run app.py when the container launches
+CMD ["python", "app.py"]
