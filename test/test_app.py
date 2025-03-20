@@ -1,4 +1,4 @@
-from src.app import app
+from app import app
 
 def test_home():
     response = app.test_client().get()
